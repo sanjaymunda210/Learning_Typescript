@@ -12,7 +12,7 @@
 // console.log(sanjay);
 
 class User {
-  private _courseCount = 1;
+  protected _courseCount = 1;
   readonly city: string = "Jamshedpur";
   constructor(
     public email: string,
@@ -38,5 +38,13 @@ class User {
     this._courseCount = courseNum;
   }
 }
+
+class SubUser extends User {
+  isFamily: boolean = true;
+  changeCourseCount() {
+    this._courseCount = 4;
+  }
+}
+
 const sanjay = new User("sanjay@gmail.com", "Sanjay");
 // sanjay.deleteToken();
