@@ -27,4 +27,16 @@ interface Bootle {
   type: number;
 }
 
-identityFour<Bootle>({ brand: "Pepsi", type: 1 });
+// identityFour<Bootle>({ brand: "Pepsi", type: 1 });
+
+function getSearchProducts<T>(products: T[]): T {
+  const myIndex = 3;
+  return products[myIndex];
+  // output should be one element of the array
+}
+
+const getMoreSearchProducts = <T>(products: T[]): T => {
+  const myIndex = 4;
+  return products[myIndex];
+};
+// comma signifies the generic
